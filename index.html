@@ -1,16 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vincent Wu</title>
-                <!-- Load your Tailwind config first so the CDN picks up `tailwind.config` -->
-                <script src="./tailwind.config.js"></script>
-                <script>
-                    /* If you want dark mode by default, uncomment the next line or toggle via JS */
-                    // document.documentElement.classList.add('dark')
-                </script>
-                <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="./tailwind.config.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ovo&display=swap" rel="stylesheet">
@@ -28,14 +23,14 @@
         
         <ul class = "hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 font-Ovo">
             <li><a href="#top">Home</a></li>
-            <li><a href="#services">Experience</a></li>
+            <li><a href="#about">Work</a></li>
 
             <li><a href="#projects">Projects</a></li>
             <li><a href="images/Vincent Wu.docx.pdf" target="_blank">Resume</a></li>
         </ul>
 
         <div class="flex items-center gap-4">
-    <button id="themeToggle" aria-label="Toggle dark mode"><img src="./images/moon_icon.png" alt="" class="w-6"></button>
+        <button><img src="./images/moon_icon.png" alt="" class="w-6"></button>
         <a href="#contact" 
         class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-Ovo"> 
             Contact Me <img src="./images/arrow-icon.png" alt="Arrow Icon" class="w-3">
@@ -53,7 +48,7 @@
             </div>
 
             <li><a href="#top" onclick="closeMenu()">Home</a></li>
-            <li><a href="#services" onclick="closeMenu()">Experience</a></li>
+            <li><a href="#about" onclick="closeMenu()">Work</a></li>
 
             <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
             <li><a href="./images/Vincent Wu.docx.pdf" onclick="closeMenu()" target="_blank">Resume</a></li>
@@ -92,8 +87,8 @@
     <ul class="grid grid-cols-1 sm:grid-cols-auto gap-6 max-w-2xl">
         <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]">
             <img src="./images/code-icon.png" alt="" class="w-7 mt-3">
-            <h3 class="my-4 font-semibold text-gray-700 dark:text-gray-200">Languages</h3>
-            <p class="text-gray-600 dark:text-gray-300 text-sm">HTML, CSS, JavaScript</p>
+            <h3 class="my-4 font-semibold text-gray-700">Languages</h3>
+            <p class="text-gray-600 text-sm">HTML, CSS, JavaScript</p>
         </li>
         <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]">
             <img src="./images/edu-icon.png" alt="" class="w-7 mt-3">
