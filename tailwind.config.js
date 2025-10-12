@@ -17,5 +17,6 @@ tailwind.config = {
     }
 
   },
-  darkMode: 'selector'
+    /* Use the 'class' strategy so Tailwind generates `dark:` variants when the `.dark` class is present on an ancestor */
+    darkMode: 'class'
 }
