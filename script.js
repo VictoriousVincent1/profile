@@ -12,12 +12,20 @@ function openMenu(){ if(sideMenu) sideMenu.style.transform = 'translateX(-16rem)
 function closeMenu(){ if(sideMenu) sideMenu.style.transform = 'translateX(16rem)'; }
 
 window.addEventListener('scroll', ()=>{
+    const isDark = document.documentElement.classList.contains('dark');
     if(window.scrollY > 50){
-        navBar.classList.add('bg-white','bg-opacity-50','backdrop-blur-lg','shadow-sm');
+        navBar.classList.add('backdrop-blur-xl');
+        if (isDark) {
+            navBar.classList.add('bg-void/95','border-cyber-cyan/10');
+            navBar.classList.remove('bg-white','bg-opacity-50');
+        } else {
+            navBar.classList.add('bg-white','bg-opacity-50','shadow-sm');
+        }
         navLinks.classList.remove('bg-white','shadow-sm','bg-opacity-50');
     } else {
-        navBar.classList.remove('bg-white','bg-opacity-50','backdrop-blur-lg','shadow-sm');
-        navLinks.classList.add('bg-white','shadow-sm','bg-opacity-50');
+        navBar.classList.remove('bg-white','bg-opacity-50','backdrop-blur-lg','shadow-sm','bg-void/95','border-cyber-cyan/10');
+        navBar.classList.add('backdrop-blur-xl');
+        if (!isDark) navLinks.classList.add('bg-white','shadow-sm','bg-opacity-50');
     }
 });
 

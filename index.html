@@ -3,300 +3,268 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vincent Wu</title>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script src="./tailwind.config.js"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ovo&display=swap" rel="stylesheet">
-        
-
+    <title>Vincent Wu — Frontend Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwind.config.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
 </head>
-<body class="overflow-x-hidden font-Outfit leading-8">
+<body class="overflow-x-hidden font-exo bg-void text-slate-200 antialiased min-h-screen">
 
-    <div class = "fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden">
-       
-        <img src="./images/header-bg-color.png" alt="" class = "w-full">
-    </div>
-    <nav class = "w-full fixed px-5 lg:px-8 xl:px[8%] py-4 flex items-center justify-between z-50">
-        <img src="./images/VW-dark.png" alt="Logo" class="w-20 cursor-pointer mr-14 dark:block">
-        <img src="./images/VW-light.png" alt="Logo" class="w-20 cursor-pointer mr-14 dark:hidden">
-       
-        <ul class = "hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 font-Ovo dark:border dark:border-white/50 dark:bg-transparent">
-            <li><a href="#top">Home</a></li>
-            <li><a href="#about">Work</a></li>
+    <!-- Background: grid + gradient -->
+    <div class="fixed inset-0 -z-20 bg-void bg-grid-pattern bg-grid bg-surface/50"></div>
+    <div class="fixed inset-0 -z-10 bg-gradient-radial pointer-events-none"></div>
 
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="images/Vincent Wu.docx.pdf" target="_blank">Resume</a></li>
-        </ul>
-
-        <div class="flex items-center gap-4">
-        <button onclick="toggleTheme()"><img src="./images/moon_icon.png" alt="" class="w-6 dark:hidden">
-        <img src="./images/sun_icon.png" alt="" class="w-6 hidden dark:block">
-    
-</button>
-        <a href="#contact" 
-        class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-Ovo"> 
-            Contact Me <img src="./images/arrow-icon.png" alt="Arrow Icon" class="w-3">
+    <!-- Nav -->
+    <nav class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 border-b border-cyber-cyan/10 bg-void/80 backdrop-blur-xl">
+        <a href="#top" class="flex items-center gap-2">
+            <img src="./images/VW-dark.png" alt="Vincent Wu" class="w-12 h-12 object-contain opacity-90 hover:opacity-100 transition">
+            <span class="font-orbitron text-sm tracking-widest text-cyber-cyan hidden sm:inline">V.W</span>
         </a>
 
-        <button class="block md:hidden ml-3" onclick="openMenu()">
-            <img src="./images/menu-black.png" alt="Menu Icon" class="w-6">
-        </button>
-       </div>
+        <ul class="hidden md:flex items-center gap-1 rounded-lg border border-cyber-cyan/20 bg-surface/60 px-6 py-2 backdrop-blur-sm">
+            <li><a href="#top" class="px-4 py-2 text-sm font-orbitron tracking-wide text-slate-300 hover:text-cyber-cyan transition">Home</a></li>
+            <li><a href="#about" class="px-4 py-2 text-sm font-orbitron tracking-wide text-slate-300 hover:text-cyber-cyan transition">Work</a></li>
+            <li><a href="#projects" class="px-4 py-2 text-sm font-orbitron tracking-wide text-slate-300 hover:text-cyber-cyan transition">Projects</a></li>
+            <li><a href="./images/Vincent Wu.docx.pdf" target="_blank" class="px-4 py-2 text-sm font-orbitron tracking-wide text-slate-300 hover:text-cyber-cyan transition">Resume</a></li>
+        </ul>
 
-<!--MOBILE MENU-->
-       <ul id="sideMenu" class="flex md:hidden  flex-col gap-4 py-20 px-10 fixed -right-64 top-0 buttom -0 w-64 z-50  h-screen bg-rose-50 transition duration-500 font-Ovo">
-            <div class ="absolute right-6 top-6" onclick="closeMenu()">
-                <img src="./images/close-black.png" alt="Close Icon" class="w-5 cursor-pointer">
-            </div>
-
-            <li><a href="#top" onclick="closeMenu()">Home</a></li>
-            <li><a href="#about" onclick="closeMenu()">Work</a></li>
-
-            <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
-            <li><a href="./images/Vincent Wu.docx.pdf" onclick="closeMenu()" target="_blank">Resume</a></li>
-       </ul>
+        <div class="flex items-center gap-3">
+            <button onclick="toggleTheme()" class="p-2 rounded-lg border border-cyber-cyan/30 text-cyber-cyan/80 hover:bg-cyber-cyan/10 transition" aria-label="Toggle theme">
+                <img src="./images/moon_icon.png" alt="" class="w-5 dark:hidden">
+                <img src="./images/sun_icon.png" alt="" class="w-5 hidden dark:block">
+            </button>
+            <a href="#contact" class="hidden lg:flex items-center gap-2 px-6 py-2.5 border border-cyber-cyan/50 rounded-lg font-orbitron text-sm tracking-wide text-cyber-cyan hover:bg-cyber-cyan/10 hover:shadow-glow-cyan-sm transition">
+                Contact <span class="text-cyber-cyan/70">→</span>
+            </a>
+            <button class="block md:hidden p-2 rounded-lg border border-cyber-cyan/30 text-slate-300 hover:text-cyber-cyan" onclick="openMenu()" aria-label="Menu">
+                <img src="./images/menu-black.png" alt="" class="w-6 invert">
+            </button>
+        </div>
     </nav>
 
-    <!--header -->
+    <!-- Mobile menu -->
+    <ul id="sideMenu" class="flex md:hidden flex-col gap-2 py-24 px-8 fixed -right-80 top-0 w-72 z-50 h-screen bg-surface border-l border-cyber-cyan/20 backdrop-blur-xl transition-transform duration-300 font-orbitron">
+        <button class="absolute right-6 top-6 p-2 text-slate-400 hover:text-cyber-cyan" onclick="closeMenu()" aria-label="Close">✕</button>
+        <li><a href="#top" onclick="closeMenu()" class="block py-3 text-slate-300 hover:text-cyber-cyan">Home</a></li>
+        <li><a href="#about" onclick="closeMenu()" class="block py-3 text-slate-300 hover:text-cyber-cyan">Work</a></li>
+        <li><a href="#projects" onclick="closeMenu()" class="block py-3 text-slate-300 hover:text-cyber-cyan">Projects</a></li>
+        <li><a href="./images/Vincent Wu.docx.pdf" onclick="closeMenu()" target="_blank" class="block py-3 text-slate-300 hover:text-cyber-cyan">Resume</a></li>
+    </ul>
 
-    <div class = "w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
-        <h3 class="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo">Hello There! I am Vincent Wu<img src="./images/hand-icon.png" alt = "" class = "w-6"></h3>
-        <h1 class = "text-3xl sm:text-6xl:text-[66px] font-Ovo">
-            frontend web developer
-        </h1>
-        <p class="max-w-2xl, mx-auto text-gray-500 text-lg sm:text-xl mt-4 font-Ovo">
-            Aspiring Computer Engineer
+    <!-- Hero -->
+    <section id="top" class="w-full max-w-5xl mx-auto px-6 min-h-screen flex flex-col items-center justify-center text-center pt-20">
+        <p class="font-orbitron text-cyber-cyan tracking-[0.3em] text-sm uppercase mb-4">Hello, I am</p>
+        <h1 class="text-5xl sm:text-7xl md:text-8xl font-orbitron font-bold tracking-tight text-gradient-cyber mb-4">Vincent Wu</h1>
+        <p class="text-2xl sm:text-3xl font-orbitron text-slate-400 font-light tracking-wide mb-2">frontend web developer</p>
+        <p class="text-slate-500 text-lg mb-10">Aspiring Computer Engineer</p>
+        <a href="#contact" class="inline-flex items-center gap-2 px-8 py-4 border-2 border-cyber-cyan/60 rounded-lg font-orbitron text-cyber-cyan tracking-wide hover:bg-cyber-cyan/10 hover:shadow-glow-cyan-sm transition border-glow">
+            Contact me <span class="text-cyber-cyan/70">→</span>
+        </a>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="w-full px-6 lg:px-[12%] py-20 scroll-mt-20">
+        <p class="text-center font-orbitron text-cyber-cyan tracking-[0.2em] text-sm uppercase mb-2">Introduction</p>
+        <h2 class="text-center text-4xl md:text-5xl font-orbitron font-bold text-white mb-16">About me</h2>
+
+        <div class="flex flex-col lg:flex-row items-center gap-16 max-w-6xl mx-auto">
+            <div class="relative flex-shrink-0">
+                <img src="./images/vincentwu.jpg" alt="Vincent Wu" class="w-64 sm:w-80 rounded-2xl max-w-none border-2 border-cyber-cyan/30 shadow-glow-cyan-sm">
+                <div class="absolute -inset-1 rounded-2xl border border-cyber-cyan/20 -z-10"></div>
+            </div>
+            <div class="flex-1">
+                <p class="text-slate-400 leading-relaxed mb-10 max-w-2xl">
+                    I am a passionate frontend web developer with a focus on creating beautiful and functional user experiences. With a strong foundation in HTML, CSS, and JavaScript, I enjoy turning ideas into reality and continuously learning new technologies to enhance my skills.
+                </p>
+                <ul class="grid grid-cols-1 sm:grid-cols-auto gap-5 max-w-2xl mb-8">
+                    <li class="rounded-xl p-6 border border-cyber-cyan/20 bg-surface/60 backdrop-blur-sm cursor-pointer hover:border-cyber-cyan/50 hover:shadow-glow-cyan-sm transition border-glow">
+                        <img src="./images/code-icon.png" alt="" class="w-8 mb-3 opacity-90">
+                        <h3 class="font-orbitron text-cyber-cyan font-semibold mb-2">Languages</h3>
+                        <p class="text-slate-500 text-sm">Python, Java, C</p>
+                    </li>
+                    <li class="rounded-xl p-6 border border-cyber-cyan/20 bg-surface/60 backdrop-blur-sm cursor-pointer hover:border-cyber-cyan/50 hover:shadow-glow-cyan-sm transition border-glow">
+                        <img src="./images/edu-icon.png" alt="" class="w-8 mb-3 opacity-90">
+                        <h3 class="font-orbitron text-cyber-cyan font-semibold mb-2">Education</h3>
+                        <p class="text-slate-500 text-sm">B.S. in Electrical and Computer Engineering at The University of Texas at Austin</p>
+                    </li>
+                    <li class="rounded-xl p-6 border border-cyber-cyan/20 bg-surface/60 backdrop-blur-sm cursor-pointer hover:border-cyber-cyan/50 hover:shadow-glow-cyan-sm transition border-glow">
+                        <img src="./images/project-icon.png" alt="" class="w-8 mb-3 opacity-90">
+                        <h3 class="font-orbitron text-cyber-cyan font-semibold mb-2">Projects</h3>
+                        <p class="text-slate-500 text-sm">Blockchain</p>
+                    </li>
+                </ul>
+                <p class="font-orbitron text-slate-400 text-sm tracking-wide mb-3">Tools I use</p>
+                <ul class="flex flex-wrap items-center gap-3">
+                    <li class="flex items-center justify-center w-12 h-12 rounded-lg border border-cyber-cyan/20 bg-surface/40 hover:border-cyber-cyan/40 transition">
+                        <img src="./images/vscode.png" alt="VS Code" class="w-6">
+                    </li>
+                    <li class="flex items-center justify-center w-12 h-12 rounded-lg border border-cyber-cyan/20 bg-surface/40 hover:border-cyber-cyan/40 transition">
+                        <img src="./images/firebase.png" alt="Firebase" class="w-6">
+                    </li>
+                    <li class="flex items-center justify-center w-12 h-12 rounded-lg border border-cyber-cyan/20 bg-surface/40 hover:border-cyber-cyan/40 transition">
+                        <img src="./images/mongodb.png" alt="MongoDB" class="w-6">
+                    </li>
+                    <li class="flex items-center justify-center w-12 h-12 rounded-lg border border-cyber-cyan/20 bg-surface/40 hover:border-cyber-cyan/40 transition">
+                        <img src="./images/figma.png" alt="Figma" class="w-6">
+                    </li>
+                    <li class="flex items-center justify-center w-12 h-12 rounded-lg border border-cyber-cyan/20 bg-surface/40 hover:border-cyber-cyan/40 transition">
+                        <img src="./images/git.png" alt="Git" class="w-6">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="services" class="w-full px-6 lg:px-[12%] py-20 scroll-mt-20">
+        <h2 class="text-center text-4xl md:text-5xl font-orbitron font-bold text-white mb-4">My Experiences</h2>
+        <p class="text-center max-w-2xl mx-auto text-slate-500 mb-14">
+            Building interfaces and experiences with a focus on performance and accessibility.
         </p>
-        <div>
-            <a href="#contact" class="px-10 py-3 border rounded-full bg-gradient-to-t from-[#b820e6] to-[#da7d20] text-white flex items-center gap-2 font-Ovo">contact me<img src="./images/right-arrow-white.png" alt="" class="w-4"></a>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-auto gap-6 max-w-6xl mx-auto">
+            <div class="rounded-xl border border-cyber-cyan/20 bg-surface/50 backdrop-blur-sm px-8 py-10 hover:border-cyber-cyan/40 hover:shadow-glow-cyan-sm transition border-glow">
+                <img src="./images/web-icon.png" alt="" class="w-10 mb-4 opacity-90">
+                <h3 class="font-orbitron text-cyber-cyan font-semibold text-lg mb-2">Korgel Research Group</h3>
+                <p class="text-slate-500 text-sm leading-relaxed mb-5">Working with consulting firms on responsive, accessible sites.</p>
+                <a href="#" data-project-id="web-design" data-project-title="Web Design" data-project-body="Built responsive websites for small businesses; focused on accessibility and performance." class="project-readmore inline-flex items-center gap-2 text-sm text-cyber-cyan hover:underline">Read more →</a>
+            </div>
+            <div class="rounded-xl border border-cyber-cyan/20 bg-surface/50 backdrop-blur-sm px-8 py-10 hover:border-cyber-cyan/40 hover:shadow-glow-cyan-sm transition border-glow">
+                <img src="./images/mobile-icon.png" alt="" class="w-10 mb-4 opacity-90">
+                <h3 class="font-orbitron text-cyber-cyan font-semibold text-lg mb-2">iCode School</h3>
+                <p class="text-slate-500 text-sm leading-relaxed mb-5">Real-time matchmaking app with OAuth and live features.</p>
+                <a href="#" data-project-id="mobile-app" data-project-title="Mobile App" data-project-body="Led frontend development for a matchmaking mobile app with real-time features and OAuth integration." class="project-readmore inline-flex items-center gap-2 text-sm text-cyber-cyan hover:underline">Read more →</a>
+            </div>
+            <div class="rounded-xl border border-cyber-cyan/20 bg-surface/50 backdrop-blur-sm px-8 py-10 hover:border-cyber-cyan/40 hover:shadow-glow-cyan-sm transition border-glow">
+                <img src="./images/ui-icon.png" alt="" class="w-10 mb-4 opacity-90">
+                <h3 class="font-orbitron text-cyber-cyan font-semibold text-lg mb-2">Accenture</h3>
+                <p class="text-slate-500 text-sm leading-relaxed mb-5">Interfaces and prototypes in Figma; collaboration with product.</p>
+                <a href="#" data-project-id="ui-ux" data-project-title="UI/UX" data-project-body="Designed intuitive interfaces and prototypes in Figma; collaborated with product teams to iterate." class="project-readmore inline-flex items-center gap-2 text-sm text-cyber-cyan hover:underline">Read more →</a>
+            </div>
+            <div class="rounded-xl border border-cyber-cyan/20 bg-surface/50 backdrop-blur-sm px-8 py-10 hover:border-cyber-cyan/40 hover:shadow-glow-cyan-sm transition border-glow">
+                <img src="./images/graphics-icon.png" alt="" class="w-10 mb-4 opacity-90">
+                <h3 class="font-orbitron text-cyber-cyan font-semibold text-lg mb-2">FinTech Collective</h3>
+                <p class="text-slate-500 text-sm leading-relaxed mb-5">Visual design and branding for digital products.</p>
+                <a href="#" class="inline-flex items-center gap-2 text-sm text-cyber-cyan hover:underline">Read more →</a>
+            </div>
+        </div>
+    </section>
 
-        </div>
-    </div>
-<!--about me-->
-<div id="about" class="w-full px-[12%] py-10 scroll-mt-20">
-    <h4 class="text-center mb-2 text-lg font-Ovo">Introduction</h4>
-    <h2 class ='text-center text-5xl font-Ovo'>About me</h2>
-   
-    <div class="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
-        <div class="max-w-max mx-auto relative">
-            <img src="./images/vincentwu.jpg" alt="User Image" class="w-64 sm:w-80 rounded-3xl  max-w-none">
-            <div class="absolute inset-0 rounded-3xl border-2 border-[#b820e6]"></div>
-        </div>
-    <div class="flex-1">
-    <p class = "mb-10 max-w-2xl">
-        I am a passionate frontend web developer with a focus on creating beautiful and functional user experiences. With a strong foundation in HTML, CSS, and JavaScript, I enjoy turning ideas into reality and continuously learning new technologies to enhance my skills.
-    </p>
-    <ul class="grid grid-cols-1 sm:grid-cols-auto gap-6 max-w-2xl">
-        <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]">
-            <img src="./images/code-icon.png" alt="" class="w-7 mt-3">
-            <h3 class="my-4 font-semibold text-gray-700">Languages</h3>
-            <p class="text-gray-600 text-sm">HTML, CSS, JavaScript</p>
-        </li>
-        <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]">
-            <img src="./images/edu-icon.png" alt="" class="w-7 mt-3">
-            <h3 class="my-4 font-semibold text-gray-700">Education</h3>
-            <p class="text-gray-600 text-sm">B.S. in Electrical and Computer Engineering at The University of Texas at Austin</p>
-        </li>
-        <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]">
-            <img src="./images/project-icon.png" alt="" class="w-7 mt-3">
-            <h3 class="my-4 font-semibold text-gray-700">Projects</h3>
-            <p class="text-gray-600 text-sm">HTML, CSS, JavaScript</p>
-        </li>
-    </ul>
-    <h4 class="my-6 text-gray-700">Tools I use</h4>
-    <ul class="flex items-center gap-3 sm:gap-5">
-        <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 hover:shadow-black">
-            <img src="./images/vscode.png" alt="" class="w-5 sm:w-7">
-        </l1>
-         <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]">
-            <img src="./images/firebase.png" alt="" class="w-5 sm:w-7">
-        </l1>
-         <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]">
-            <img src="./images/mongodb.png" alt="" class="w-5 sm:w-7">
-        </l1>
-         <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]">
-            <img src="./images/figma.png" alt="" class="w-5 sm:w-7">
-        </l1>
-         <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]">
-            <img src="./images/git.png" alt="" class="w-5 sm:w-7">
-        </l1>
-    </ul>
-    </div>
-</div>
-</div>
-<!--Experience   -->
-<div id="services" class="w-full py-10 scroll-mt-20">
-    <h2 class ='text-center text-5xl'>Experience </h2>
-     <p class = "text-center max-w-2xl mx-auto mt-5 mb-12">
-        I am a passionate frontend web developer with a focus on creating beautiful and functional user experiences. With a strong foundation in HTML, CSS, and JavaScript, I enjoy turning ideas into reality and continuously learning new technologies to enhance my skills.
-    </p>
-    <div class="grid grid-cols-auto gap-6 my-10">
-        <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500">
-            <img src="./images/web-icon.png" alt="" class="w-10">
-            <h3 class="text-lg my-4 text-gray-700">web design</h3>  
-            <p class="text-sm text-gray-600 leading-5">
-                my experience include working along consulting firms
-            </p>
-            
-            <a href="#" data-project-id="web-design" data-project-title="Web Design" data-project-body="Built responsive websites for small businesses; focused on accessibility and performance." class="flex items-center gap-2 text-sm mt-5 project-readmore">Read more<img src="./images/right-arrow.png" alt="" class="w-4"></a>
-        </div>
-        <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500">
-            <img src="./images/mobile-icon.png" alt="" class="w-10">
-            <h3 class="text-lg my-4 text-gray-700">Mobile App</h3>  
-            <p class="text-sm text-gray-600 leading-5">
-                my experience include working along consulting firms
-            </p>
-            
-            <a href="#" data-project-id="mobile-app" data-project-title="Mobile App" data-project-body="Led frontend development for a matchmaking mobile app with real-time features and OAuth integration." class="flex items-center gap-2 text-sm mt-5 project-readmore">Read more<img src="./images/right-arrow.png" alt="" class="w-4"></a>
-        </div>
- <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500">
-            <img src="./images/ui-icon.png" alt="" class="w-10">
-            <h3 class="text-lg my-4 text-gray-700">UI/UX Design</h3>  
-            <p class="text-sm text-gray-600 leading-5">
-                my experience include working along consulting firms
-            </p>
-            
-            <a href="#" data-project-id="ui-ux" data-project-title="UI/UX" data-project-body="Designed intuitive interfaces and prototypes in Figma; collaborated with product teams to iterate." class="flex items-center gap-2 text-sm mt-5 project-readmore">Read more<img src="./images/right-arrow.png" alt="" class="w-4"></a>
-        </div>
-         <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500">
-            <img src="./images/graphics-icon.png" alt="" class="w-10">
-            <h3 class="text-lg my-4 text-gray-700">Graphics Design</h3>  
-            <p class="text-sm text-gray-600 leading-5">
-                my experience include working along consulting firms
-            </p>
-            
-            <a href="" class="flex items-center gap-2 text-sm mt-5">Read more<img src="./images/right-arrow.png" alt="" class="w-4"></a>
-        </div>
-
-
-
-
-    </div>
-</div>
-<!--Project-->
-<div id="projects" class="w-full px-[12%] py-10 scroll-mt-20">
-    <h2 class ='text-center text-5xl'>Projects </h2>
-     <p class = "text-center max-w-2xl mx-auto mt-5 mb-12">
-        welcome to my portfolio! Here, you can explore a selection of my recent projects that showcase my skills and creativity as a frontend web developer. Each project reflects my dedication to delivering high-quality work and my passion for creating engaging user experiences.
-    </p>
-    <div class="grid grid-cols-auto my-10 gap-5">
-        <div class = "aspect-square bg-[url('./images/work-1.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"> 
-            <div class = "bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
-                <div>
-                    <h3 class="text-lg font-semibold">Connect 4</h3>
-                    <span class="text-sm text-gray-700">Microcontroller Game</span> 
+    <!-- Projects -->
+    <section id="projects" class="w-full px-6 lg:px-[12%] py-20 scroll-mt-20">
+        <h2 class="text-center text-4xl md:text-5xl font-orbitron font-bold text-white mb-4">Things I've Built</h2>
+        <p class="text-center max-w-2xl mx-auto text-slate-500 mb-14">
+            A selection of recent work—frontend, full-stack, and design.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-auto gap-6 max-w-6xl mx-auto">
+            <div class="group aspect-square rounded-xl overflow-hidden border border-cyber-cyan/20 bg-surface/40 bg-[url('./images/work-1.png')] bg-cover bg-center relative cursor-pointer hover:border-cyber-cyan/50 hover:shadow-glow-cyan-sm transition">
+                <div class="absolute inset-0 bg-gradient-to-t from-void via-void/60 to-transparent opacity-90"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-5 flex items-center justify-between">
+                    <div>
+                        <h3 class="font-orbitron text-white font-semibold">Connect 4</h3>
+                        <span class="text-slate-400 text-sm">Microcontroller Game</span>
+                    </div>
+                    <span class="w-10 h-10 rounded-full border border-cyber-cyan/50 flex items-center justify-center text-cyber-cyan group-hover:bg-cyber-cyan/20 transition">→</span>
                 </div>
-                <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
-                    <img src="./images/send-icon.png" alt="" class="w-5">
+            </div>
+            <div class="group aspect-square rounded-xl overflow-hidden border border-cyber-cyan/20 bg-surface/40 bg-[url('./images/work-2.png')] bg-cover bg-center relative cursor-pointer hover:border-cyber-cyan/50 hover:shadow-glow-cyan-sm transition">
+                <div class="absolute inset-0 bg-gradient-to-t from-void via-void/60 to-transparent opacity-90"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-5 flex items-center justify-between">
+                    <div>
+                        <h3 class="font-orbitron text-white font-semibold">NFT Ticketing</h3>
+                        <span class="text-slate-400 text-sm">Matchmaking App</span>
+                    </div>
+                    <span class="w-10 h-10 rounded-full border border-cyber-cyan/50 flex items-center justify-center text-cyber-cyan group-hover:bg-cyber-cyan/20 transition">→</span>
+                </div>
+            </div>
+            <div class="group aspect-square rounded-xl overflow-hidden border border-cyber-cyan/20 bg-surface/40 bg-[url('./images/work-3.png')] bg-cover bg-center relative cursor-pointer hover:border-cyber-cyan/50 hover:shadow-glow-cyan-sm transition">
+                <div class="absolute inset-0 bg-gradient-to-t from-void via-void/60 to-transparent opacity-90"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-5 flex items-center justify-between">
+                    <div>
+                        <h3 class="font-orbitron text-white font-semibold">Pact</h3>
+                        <span class="text-slate-400 text-sm">UI/UX Designing</span>
+                    </div>
+                    <span class="w-10 h-10 rounded-full border border-cyber-cyan/50 flex items-center justify-center text-cyber-cyan group-hover:bg-cyber-cyan/20 transition">→</span>
+                </div>
+            </div>
+            <div class="group aspect-square rounded-xl overflow-hidden border border-cyber-cyan/20 bg-surface/40 bg-[url('./images/work-4.png')] bg-cover bg-center relative cursor-pointer hover:border-cyber-cyan/50 hover:shadow-glow-cyan-sm transition">
+                <div class="absolute inset-0 bg-gradient-to-t from-void via-void/60 to-transparent opacity-90"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-5 flex items-center justify-between">
+                    <div>
+                        <h3 class="font-orbitron text-white font-semibold">StockSense AI</h3>
+                        <span class="text-slate-400 text-sm">Cloud Computing</span>
+                    </div>
+                    <span class="w-10 h-10 rounded-full border border-cyber-cyan/50 flex items-center justify-center text-cyber-cyan group-hover:bg-cyber-cyan/20 transition">→</span>
                 </div>
             </div>
         </div>
-        <div class = "aspect-square bg-[url('./images/work-2.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"> 
-            <div class = "bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
-                <div>
-                    <h3 class="text-lg font-semibold">GameOn</h3>
-                    <span class="text-sm text-gray-700">Matchmaking App</span> 
-                </div>
-                <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
-                    <img src="./images/send-icon.png" alt="" class="w-5">
-                </div>
-            </div>
+        <div class="text-center mt-10">
+            <a href="#" class="inline-flex items-center gap-2 px-8 py-3 border border-cyber-cyan/40 rounded-lg font-orbitron text-sm text-cyber-cyan hover:bg-cyber-cyan/10 transition">Show more →</a>
         </div>
-        <div class = "aspect-square bg-[url('./images/work-3.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"> 
-            <div class = "bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
-                <div>
-                    <h3 class="text-lg font-semibold">UI/UX</h3>
-                    <span class="text-sm text-gray-700">UI/UX Designing</span> 
+    </section>
+
+    <!-- Project modal -->
+    <div id="projectModal" class="fixed inset-0 hidden items-center justify-center z-50 p-4" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalBody">
+        <div id="modalBackdrop" class="absolute inset-0 bg-void/90 backdrop-blur-sm"></div>
+        <div id="modalContentBox" class="relative bg-surface border border-cyber-cyan/30 rounded-2xl max-w-3xl w-full p-6 shadow-glow-cyan z-10 transform transition-all duration-300 scale-95 opacity-0 translate-y-6">
+            <button id="modalClose" class="absolute top-4 right-4 w-10 h-10 rounded-lg border border-cyber-cyan/30 text-slate-400 hover:text-cyber-cyan hover:bg-cyber-cyan/10 transition" aria-label="Close">✕</button>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="md:col-span-1 flex items-center justify-center">
+                    <div id="modalImage" class="w-full h-40 md:h-44 bg-void rounded-xl bg-center bg-cover border border-cyber-cyan/20"></div>
                 </div>
-                <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
-                    <img src="./images/send-icon.png" alt="" class="w-5">
-                </div>
-            </div>
-        </div>
-        <div class = "aspect-square bg-[url('./images/work-4.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"> 
-            <div class = "bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
-                <div>
-                    <h3 class="text-lg font-semibold">Full-Stack Dev</h3>
-                    <span class="text-sm text-gray-700">Cloud Computing</span> 
-                </div>
-                <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
-                    <img src="./images/send-icon.png" alt="" class="w-5">
+                <div class="md:col-span-2">
+                    <h3 id="modalTitle" class="font-orbitron text-2xl font-bold text-white mb-2">Project Title</h3>
+                    <div class="flex items-center gap-3 text-sm text-slate-500 mb-3">
+                        <span id="modalRole" class="px-2 py-1 bg-cyber-cyan/10 border border-cyber-cyan/20 rounded text-cyber-cyan text-xs font-orbitron">Role</span>
+                        <span id="modalPeriod" class="px-2 py-1 bg-surface border border-cyber-cyan/20 rounded text-slate-400 text-xs">2024</span>
+                    </div>
+                    <div id="modalBody" class="prose prose-invert prose-sm max-w-none text-slate-400"></div>
+                    <div id="modalTech" class="mt-4 flex flex-wrap gap-2"></div>
+                    <div id="modalLinks" class="mt-6 flex gap-3"></div>
                 </div>
             </div>
         </div>
     </div>
-    <a href="#" class="w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto-20 hover:bg-[#fcf4ff] duration-500"> Show more <img src="./images/right-arrow-bold.png" alt="" class="w-4"></a>
-</div>
 
-<!-- Project details modal (rich) -->
-<div id="projectModal" class="fixed inset-0 hidden items-center justify-center z-50" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalBody">
-    <div id="modalBackdrop" class="absolute inset-0 bg-black/50"></div>
-    <div id="modalContentBox" class="relative bg-white dark:bg-gray-900 text-gray-900 dark:text-white rounded-xl max-w-3xl w-full mx-4 p-6 shadow-2xl z-10 transform transition-all duration-300 scale-95 opacity-0 translate-y-6">
-        <button id="modalClose" class="absolute top-4 right-4 text-gray-600 dark:text-gray-200 hover:opacity-80" aria-label="Close">✕</button>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <!-- visual / image -->
-            <div class="md:col-span-1 flex items-center justify-center">
-                <div id="modalImage" class="w-full h-40 md:h-44 bg-gray-100 dark:bg-gray-800 rounded-lg bg-center bg-cover"></div>
+    <!-- Contact -->
+    <section id="contact" class="w-full px-6 lg:px-[12%] py-20 scroll-mt-20 border-t border-cyber-cyan/10">
+        <p class="text-center font-orbitron text-cyber-cyan tracking-[0.2em] text-sm uppercase mb-2">Contact</p>
+        <h2 class="text-center text-4xl md:text-5xl font-orbitron font-bold text-white mb-4">Get in touch</h2>
+        <p class="text-center max-w-2xl mx-auto text-slate-500 mb-12">
+            Questions, project ideas, or just saying hi—reach out via email or socials.
+        </p>
+        <form action="" class="max-w-2xl mx-auto">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
+                <input type="text" placeholder="Your name" class="w-full p-4 rounded-lg border border-cyber-cyan/20 bg-surface/60 text-white placeholder-slate-500 focus:border-cyber-cyan/50 transition">
+                <input type="email" placeholder="Your email" class="w-full p-4 rounded-lg border border-cyber-cyan/20 bg-surface/60 text-white placeholder-slate-500 focus:border-cyber-cyan/50 transition">
             </div>
+            <textarea rows="5" placeholder="Your message" class="w-full p-4 rounded-lg border border-cyber-cyan/20 bg-surface/60 text-white placeholder-slate-500 focus:border-cyber-cyan/50 transition resize-none mb-6"></textarea>
+            <div class="text-center">
+                <button type="submit" class="inline-flex items-center gap-2 px-8 py-4 border-2 border-cyber-cyan/50 rounded-lg font-orbitron text-cyber-cyan hover:bg-cyber-cyan/10 hover:shadow-glow-cyan-sm transition">Submit →</button>
+            </div>
+        </form>
 
-            <!-- main content -->
-            <div class="md:col-span-2">
-                <h3 id="modalTitle" class="text-2xl font-semibold mb-2">Project Title</h3>
-                <div class="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-300 mb-3">
-                    <span id="modalRole" class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded">Role</span>
-                    <span id="modalPeriod" class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded">2024</span>
-                </div>
-
-                <div id="modalBody" class="prose prose-sm dark:prose-invert max-w-none text-gray-700 dark:text-gray-200">Project details go here.</div>
-
-                <div id="modalTech" class="mt-4 flex flex-wrap gap-2"></div>
-
-                <div id="modalLinks" class="mt-6 flex gap-3"></div>
+        <div class="mt-20 max-w-4xl mx-auto">
+            <div class="text-center mb-8">
+                <img src="./images/VW-dark.png" alt="" class="w-24 mx-auto mb-4 opacity-80">
+                <a href="mailto:vincentwu@utexas.edu" class="inline-flex items-center gap-2 text-cyber-cyan hover:underline font-orbitron text-sm">
+                    <img src="./images/mail_icon.png" alt="" class="w-5 invert opacity-80"> vincentwu@utexas.edu
+                </a>
+            </div>
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-cyber-cyan/20">
+                <p class="text-slate-500 text-sm font-orbitron tracking-wide">© 2025 Vincent Wu</p>
+                <ul class="flex items-center gap-8">
+                    <li><a href="https://www.instagram.com/vincen_wu_/" class="text-slate-400 hover:text-cyber-cyan transition text-sm font-orbitron">Instagram</a></li>
+                    <li><a href="https://github.com/VictoriousVincent1" class="text-slate-400 hover:text-cyber-cyan transition text-sm font-orbitron">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/vincentwu1/" class="text-slate-400 hover:text-cyber-cyan transition text-sm font-orbitron">LinkedIn</a></li>
+                    <li><a href="#" class="text-slate-400 hover:text-cyber-cyan transition text-sm font-orbitron">Twitter</a></li>
+                </ul>
             </div>
         </div>
-    </div>
-</div>
+    </section>
 
-<!--contact-->
-<div id="contact" class="w-full px-[12%] py-10 scroll-mt-20 bg-[url('./images/footer-bg-color.png')] bg-no-repeat bg-[length:90%_auto] bg-center">
-    <h4 class="text-center mb-2 text-lg">Contact Me</h4>
-    <h2 class ='text-center text-5xl'>Get In Touch </h2>
-     <p class = "text-center max-w-2xl mx-auto mt-5 mb-12">
-I'd love to hear from you! Whether you have a question about my work, want to discuss a project, or just want to say hi, feel free to reach out. You can contact me via email or connect with me on social media.
-    </p>
-    <form action="" class="max-w-2xl mx-auto">
-        <div class="grid grid-cols-auto gap-6 mt-10 mb-8">
-            <input type="text" placeholder="Enter Your Name" class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white">
-            <input type="email" placeholder="Enter Your Email" class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white">
-        </div>
-        <textarea rows="6" placeholder="Enter your message" class="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white"></textarea>
-    <button class = "py-3 px-8 w-max flex items-center justify-center gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500">Submit now <img src="./images/right-arrow-white.png" alt="" class="w-4"></button>
-    </form>
-
-    <!-- JavaScript -->
-     <div class="mt-20">
-        <div class="text-center">
-            <img src="./images/VW-dark.png" alt="" class="w-36 mx-auto mb-2">
-            <div class="w-max flex items-center gap-2 mx-auto">
-               <a href="mailto:vincentwu@utexas.edu"><img src="./images/mail_icon.png" alt="" class="w-6">vincentwu@utexas.edu</a>
-            </div>
-
-        </div>
-        <div class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6">
-            <p>© 2025 Vincent Wu. All rights reserved.</p>
-            <ul class = "flex items-center gap-10 justify-center my-4 sm:mt-0">
-                <li><a href="https://www.instagram.com/vincen_wu_/" class="text-gray-700 hover:underline">Instagram</a></li>
-                <li><a href="https://github.com/VictoriousVincent1" class="text-gray-700 hover:underline">Github</a></li>
-                <li><a href="https://www.linkedin.com/in/vincentwu1/" class="text-gray-700 hover:underline">LinkedIn</a></li>
-                <li><a href="#" class="text-gray-700 hover:underline">Twitter</a></li>
-            </ul>
-        </div>
-     </div>
     <script src="./script.js"></script>
-
-  
 </body>
 </html>
