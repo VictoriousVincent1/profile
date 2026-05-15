@@ -21,19 +21,20 @@
     <nav class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 border-b border-cyber-cyan/10 bg-void/80 backdrop-blur-xl">
         <a href="#top" class="flex items-center gap-2">
             <img src="./images/VW-dark.png" alt="Vincent Wu" class="w-12 h-12 object-contain opacity-90 hover:opacity-100 transition">
-            <span class="font-orbitron text-sm tracking-widest text-cyber-cyan hidden sm:inline">V.W</span>
+            <span class="font-orbitron text-sm tracking-widest text-cyber-cyan hidden sm:inline">Vincent Wu</span>
         </a>
 
         <ul class="hidden md:flex items-center gap-1 rounded-lg border border-cyber-cyan/20 bg-surface/60 px-6 py-2 backdrop-blur-sm">
             <li><a href="#top" class="px-4 py-2 text-sm font-orbitron tracking-wide text-slate-300 hover:text-cyber-cyan transition">Home</a></li>
             <li><a href="#about" class="px-4 py-2 text-sm font-orbitron tracking-wide text-slate-300 hover:text-cyber-cyan transition">Work</a></li>
+            <li><a href="#blog" class="px-4 py-2 text-sm font-orbitron tracking-wide text-slate-300 hover:text-cyber-cyan transition">Blog</a></li>
             <li><a href="#projects" class="px-4 py-2 text-sm font-orbitron tracking-wide text-slate-300 hover:text-cyber-cyan transition">Projects</a></li>
             <li><a href="./images/Vincent Wu.docx.pdf" target="_blank" class="px-4 py-2 text-sm font-orbitron tracking-wide text-slate-300 hover:text-cyber-cyan transition">Resume</a></li>
         </ul>
 
         <div class="flex items-center gap-3">
             
-            <a href="#contact" class="hidden lg:flex items-center gap-2 px-6 py-2.5 border border-cyber-cyan/50 rounded-lg font-orbitron text-sm tracking-wide text-cyber-cyan hover:bg-cyber-cyan/10 hover:shadow-glow-cyan-sm transition">
+            <a href="mailto:vincentwu@utexas.edu" class="hidden lg:flex items-center gap-2 px-6 py-2.5 border border-cyber-cyan/50 rounded-lg font-orbitron text-sm tracking-wide text-cyber-cyan hover:bg-cyber-cyan/10 hover:shadow-glow-cyan-sm transition">
                 Contact <span class="text-cyber-cyan/70">→</span>
             </a>
             <button class="block md:hidden p-2 rounded-lg border border-cyber-cyan/30 text-slate-300 hover:text-cyber-cyan" onclick="openMenu()" aria-label="Menu">
@@ -47,6 +48,7 @@
         <button class="absolute right-6 top-6 p-2 text-slate-400 hover:text-cyber-cyan" onclick="closeMenu()" aria-label="Close">✕</button>
         <li><a href="#top" onclick="closeMenu()" class="block py-3 text-slate-300 hover:text-cyber-cyan">Home</a></li>
         <li><a href="#about" onclick="closeMenu()" class="block py-3 text-slate-300 hover:text-cyber-cyan">Work</a></li>
+        <li><a href="#blog" onclick="closeMenu()" class="block py-3 text-slate-300 hover:text-cyber-cyan">Blog</a></li>
         <li><a href="#projects" onclick="closeMenu()" class="block py-3 text-slate-300 hover:text-cyber-cyan">Projects</a></li>
         <li><a href="./images/Vincent Wu.docx.pdf" onclick="closeMenu()" target="_blank" class="block py-3 text-slate-300 hover:text-cyber-cyan">Resume</a></li>
     </ul>
@@ -55,9 +57,9 @@
     <section id="top" class="w-full max-w-5xl mx-auto px-6 min-h-screen flex flex-col items-center justify-center text-center pt-20">
         <p class="font-orbitron text-cyber-cyan tracking-[0.3em] text-sm uppercase mb-4">Hello, I am</p>
         <h1 class="text-5xl sm:text-7xl md:text-8xl font-orbitron font-bold tracking-tight text-gradient-cyber mb-4">Vincent Wu</h1>
-        <p class="text-2xl sm:text-3xl font-orbitron text-slate-400 font-light tracking-wide mb-2">SWE and Full Stack Developer</p>
-        <p class="text-slate-500 text-lg mb-10">Aspiring Computer Engineer</p>
-        <a href="#contact" class="inline-flex items-center gap-2 px-8 py-4 border-2 border-cyber-cyan/60 rounded-lg font-orbitron text-cyber-cyan tracking-wide hover:bg-cyber-cyan/10 hover:shadow-glow-cyan-sm transition border-glow">
+        <p class="text-2xl sm:text-3xl font-orbitron text-slate-400 font-light tracking-wide mb-2">I use AI to innovate and create impactful solutions in Full Stack and Hardware Languages.</p>
+        <p class="text-slate-500 text-lg mb-10"> Hello! I'm Vincent and I am passionate in building innovative solutions that interacts with AI. I also keep up to date on System on a Chip (SoC) development.</p>
+        <a href="mailto:vincentwu@utexas.edu" class="inline-flex items-center gap-2 px-8 py-4 border-2 border-cyber-cyan/60 rounded-lg font-orbitron text-cyber-cyan tracking-wide hover:bg-cyber-cyan/10 hover:shadow-glow-cyan-sm transition border-glow">
             Contact me <span class="text-cyber-cyan/70">→</span>
         </a>
     </section>
@@ -74,43 +76,15 @@
             </div>
             <div class="flex-1">
                 <p class="text-slate-400 leading-relaxed mb-10 max-w-2xl">
-                    I am a passionate full stack web developer with a focus on creating functional user experiences. With a strong foundation in HTML, CSS, and JavaScript, I enjoy turning ideas into reality and continuously learning new technologies to enhance my skills. I also explore backend development with Node.js and Python, and database management with MongoDB and Firebase.  
+My name is Vincent Wu, and I enjoy putting artificial intelligence at the heart of computer engineering and full stack development. From interacting with Siri to riding a autonomous vehicle, I've been interested in how a system computes all the data and make decisions. Many of my projects include Hackathon development, start-ups, and Hardware Description Language. 
                 </p>
-                <ul class="grid grid-cols-1 sm:grid-cols-auto gap-5 max-w-2xl mb-8">
-                    <li class="rounded-xl p-6 border border-cyber-cyan/20 bg-surface/60 backdrop-blur-sm cursor-pointer hover:border-cyber-cyan/50 hover:shadow-glow-cyan-sm transition border-glow">
-                        <img src="./images/code-icon.png" alt="" class="w-8 mb-3 opacity-90">
-                        <h3 class="font-orbitron text-cyber-cyan font-semibold mb-2">Languages</h3>
-                        <p class="text-slate-500 text-sm">Python, Java, C</p>
-                    </li>
-                    <li class="rounded-xl p-6 border border-cyber-cyan/20 bg-surface/60 backdrop-blur-sm cursor-pointer hover:border-cyber-cyan/50 hover:shadow-glow-cyan-sm transition border-glow">
-                        <img src="./images/edu-icon.png" alt="" class="w-8 mb-3 opacity-90">
-                        <h3 class="font-orbitron text-cyber-cyan font-semibold mb-2">Education</h3>
-                        <p class="text-slate-500 text-sm">B.S. in Electrical and Computer Engineering at The University of Texas at Austin</p>
-                    </li>
-                    <li class="rounded-xl p-6 border border-cyber-cyan/20 bg-surface/60 backdrop-blur-sm cursor-pointer hover:border-cyber-cyan/50 hover:shadow-glow-cyan-sm transition border-glow">
-                        <img src="./images/project-icon.png" alt="" class="w-8 mb-3 opacity-90">
-                        <h3 class="font-orbitron text-cyber-cyan font-semibold mb-2">Projects</h3>
-                        <p class="text-slate-500 text-sm">EcoCar Mobility Challenge</p>
-                        <p class="text-slate-500 text-sm">FinTech Producf</p>
-                    </li>
-                </ul>
                 <p class="font-orbitron text-slate-400 text-sm tracking-wide mb-3">Tools I use</p>
                 <ul class="flex flex-wrap items-center gap-3">
-                    <li class="flex items-center justify-center w-12 h-12 rounded-lg border border-cyber-cyan/20 bg-surface/40 hover:border-cyber-cyan/40 transition">
-                        <img src="./images/vscode.png" alt="VS Code" class="w-6">
-                    </li>
-                    <li class="flex items-center justify-center w-12 h-12 rounded-lg border border-cyber-cyan/20 bg-surface/40 hover:border-cyber-cyan/40 transition">
-                        <img src="./images/firebase.png" alt="Firebase" class="w-6">
-                    </li>
-                    <li class="flex items-center justify-center w-12 h-12 rounded-lg border border-cyber-cyan/20 bg-surface/40 hover:border-cyber-cyan/40 transition">
-                        <img src="./images/mongodb.png" alt="MongoDB" class="w-6">
-                    </li>
-                    <li class="flex items-center justify-center w-12 h-12 rounded-lg border border-cyber-cyan/20 bg-surface/40 hover:border-cyber-cyan/40 transition">
-                        <img src="./images/figma.png" alt="Figma" class="w-6">
-                    </li>
-                    <li class="flex items-center justify-center w-12 h-12 rounded-lg border border-cyber-cyan/20 bg-surface/40 hover:border-cyber-cyan/40 transition">
-                        <img src="./images/git.png" alt="Git" class="w-6">
-                    </li>
+                    <li class="px-4 py-2 rounded-lg border border-cyber-cyan/20 bg-surface/40 text-sm text-slate-300 font-orbitron hover:border-cyber-cyan/40 transition">VS Code</li>
+                    <li class="px-4 py-2 rounded-lg border border-cyber-cyan/20 bg-surface/40 text-sm text-slate-300 font-orbitron hover:border-cyber-cyan/40 transition">Firebase</li>
+                    <li class="px-4 py-2 rounded-lg border border-cyber-cyan/20 bg-surface/40 text-sm text-slate-300 font-orbitron hover:border-cyber-cyan/40 transition">MongoDB</li>
+                    <li class="px-4 py-2 rounded-lg border border-cyber-cyan/20 bg-surface/40 text-sm text-slate-300 font-orbitron hover:border-cyber-cyan/40 transition">Figma</li>
+                    <li class="px-4 py-2 rounded-lg border border-cyber-cyan/20 bg-surface/40 text-sm text-slate-300 font-orbitron hover:border-cyber-cyan/40 transition">Git</li>
                 </ul>
             </div>
         </div>
@@ -156,50 +130,106 @@
         <p class="text-center max-w-2xl mx-auto text-slate-500 mb-14">
             A selection of recent work—frontend, full-stack, and design.
         </p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-auto gap-6 max-w-6xl mx-auto">
-            <div class="group aspect-square rounded-xl overflow-hidden border border-cyber-cyan/20 bg-surface/40 bg-[url('./images/work-1.png')] bg-cover bg-center relative cursor-pointer hover:border-cyber-cyan/50 hover:shadow-glow-cyan-sm transition">
-                <div class="absolute inset-0 bg-gradient-to-t from-void via-void/60 to-transparent opacity-90"></div>
-                <div class="absolute bottom-0 left-0 right-0 p-5 flex items-center justify-between">
-                    <div>
-                        <h3 class="font-orbitron text-white font-semibold">Connect 4</h3>
-                        <span class="text-slate-400 text-sm">Microcontroller Game</span>
+        <div class="grid gap-6 max-w-6xl mx-auto">
+            <div class="group overflow-hidden rounded-2xl border border-cyber-cyan/20 bg-surface/50 backdrop-blur-sm transition hover:border-cyber-cyan/50 hover:shadow-glow-cyan-sm">
+                <div class="grid grid-cols-1 md:grid-cols-[240px,1fr]">
+                    <div class="min-h-56 md:min-h-full bg-[url('./images/work-1.png')] bg-cover bg-center"></div>
+                    <div class="p-6 md:p-8 flex flex-col justify-between gap-5">
+                        <div>
+                            <h3 class="font-orbitron text-2xl font-semibold text-white mb-2">FPGA Stopwatch</h3>
+                            <p class="text-slate-400 leading-relaxed mb-4">Built a multi-mode stopwatch/timer using Verilog with FSM-based control and BCD datapath
+Implemented up/down counting, external value loading, 7-segment display, and  multiplexing synchronization logic 
+</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 rounded-full border border-cyber-cyan/20 bg-cyber-cyan/10 text-cyber-cyan text-xs font-orbitron">Verilog</span>
+                                <span class="px-3 py-1 rounded-full border border-cyber-cyan/20 bg-cyber-cyan/10 text-cyber-cyan text-xs font-orbitron">FPGA</span>
+                                <span class="px-3 py-1 rounded-full border border-cyber-cyan/20 bg-cyber-cyan/10 text-cyber-cyan text-xs font-orbitron">RTL</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-end">
+                            <span class="w-10 h-10 rounded-full border border-cyber-cyan/50 flex items-center justify-center text-cyber-cyan group-hover:bg-cyber-cyan/20 transition">→</span>
+                        </div>
                     </div>
-                    <span class="w-10 h-10 rounded-full border border-cyber-cyan/50 flex items-center justify-center text-cyber-cyan group-hover:bg-cyber-cyan/20 transition">→</span>
                 </div>
             </div>
-            <div class="group aspect-square rounded-xl overflow-hidden border border-cyber-cyan/20 bg-surface/40 bg-[url('./images/work-2.png')] bg-cover bg-center relative cursor-pointer hover:border-cyber-cyan/50 hover:shadow-glow-cyan-sm transition">
-                <div class="absolute inset-0 bg-gradient-to-t from-void via-void/60 to-transparent opacity-90"></div>
-                <div class="absolute bottom-0 left-0 right-0 p-5 flex items-center justify-between">
-                    <div>
-                        <h3 class="font-orbitron text-white font-semibold">NFT Ticketing</h3>
-                        <span class="text-slate-400 text-sm">Blockchain Version Control Ticketing</span>
+
+            <div class="group overflow-hidden rounded-2xl border border-cyber-cyan/20 bg-surface/50 backdrop-blur-sm transition hover:border-cyber-cyan/50 hover:shadow-glow-cyan-sm">
+                <div class="grid grid-cols-1 md:grid-cols-[240px,1fr]">
+                    <div class="min-h-56 md:min-h-full bg-[url('./images/work-2.png')] bg-cover bg-center"></div>
+                    <div class="p-6 md:p-8 flex flex-col justify-between gap-5">
+                        <div>
+                            <h3 class="font-orbitron text-2xl font-semibold text-white mb-2">AI Chess Win Prediction</h3>
+                            <p class="text-slate-400 leading-relaxed mb-4">Architected a Deep Learning model using Convolutional Neural Networks (CNN) to predict chess win probabilities with a Value Head approach, mapping board states (FEN) to probabilistic outcomes.
+Optimized training performance by implementing ReLU activation functions to capture non-linear piece interactions and utilized Categorical Cross-Entropy to minimize loss across thousands of grandmaster-level games.
+</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 rounded-full border border-cyber-cyan/20 bg-cyber-cyan/10 text-cyber-cyan text-xs font-orbitron">Deep Learning</span>
+                                <span class="px-3 py-1 rounded-full border border-cyber-cyan/20 bg-cyber-cyan/10 text-cyber-cyan text-xs font-orbitron">Neural Networks</span>
+                                <span class="px-3 py-1 rounded-full border border-cyber-cyan/20 bg-cyber-cyan/10 text-cyber-cyan text-xs font-orbitron">Chess</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-end">
+                            <span class="w-10 h-10 rounded-full border border-cyber-cyan/50 flex items-center justify-center text-cyber-cyan group-hover:bg-cyber-cyan/20 transition">→</span>
+                        </div>
                     </div>
-                    <span class="w-10 h-10 rounded-full border border-cyber-cyan/50 flex items-center justify-center text-cyber-cyan group-hover:bg-cyber-cyan/20 transition">→</span>
                 </div>
             </div>
-            <div class="group aspect-square rounded-xl overflow-hidden border border-cyber-cyan/20 bg-surface/40 bg-[url('./images/work-3.png')] bg-cover bg-center relative cursor-pointer hover:border-cyber-cyan/50 hover:shadow-glow-cyan-sm transition">
-                <div class="absolute inset-0 bg-gradient-to-t from-void via-void/60 to-transparent opacity-90"></div>
-                <div class="absolute bottom-0 left-0 right-0 p-5 flex items-center justify-between">
-                    <div>
-                        <h3 class="font-orbitron text-white font-semibold">Pact</h3>
-                        <span class="text-slate-400 text-sm">Blockchain Smart Contract Ledger</span>
+
+            <div class="group overflow-hidden rounded-2xl border border-cyber-cyan/20 bg-surface/50 backdrop-blur-sm transition hover:border-cyber-cyan/50 hover:shadow-glow-cyan-sm">
+                <div class="grid grid-cols-1 md:grid-cols-[240px,1fr]">
+                    <div class="min-h-56 md:min-h-full bg-[url('./images/work-3.png')] bg-cover bg-center"></div>
+                    <div class="p-6 md:p-8 flex flex-col justify-between gap-5">
+                        <div>
+                            <h3 class="font-orbitron text-2xl font-semibold text-white mb-2">Pact</h3>
+                            <p class="text-slate-400 leading-relaxed mb-4">Engineered full-stack vendor management platform with secure on-chain contract/payment handling Solana Devnet; 
+Automated project metadata extraction (timeline, version control, transactions) eliminating 80% of manual data entry
+Won CBRE Challenge Statement & Best use of Solana at Hack UT Dallas 2025
+</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 rounded-full border border-cyber-cyan/20 bg-cyber-cyan/10 text-cyber-cyan text-xs font-orbitron">Smart Contracts</span>
+                                <span class="px-3 py-1 rounded-full border border-cyber-cyan/20 bg-cyber-cyan/10 text-cyber-cyan text-xs font-orbitron">Ledger</span>
+                                <span class="px-3 py-1 rounded-full border border-cyber-cyan/20 bg-cyber-cyan/10 text-cyber-cyan text-xs font-orbitron">Security</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-end">
+                            <span class="w-10 h-10 rounded-full border border-cyber-cyan/50 flex items-center justify-center text-cyber-cyan group-hover:bg-cyber-cyan/20 transition">→</span>
+                        </div>
                     </div>
-                    <span class="w-10 h-10 rounded-full border border-cyber-cyan/50 flex items-center justify-center text-cyber-cyan group-hover:bg-cyber-cyan/20 transition">→</span>
                 </div>
             </div>
-            <div class="group aspect-square rounded-xl overflow-hidden border border-cyber-cyan/20 bg-surface/40 bg-[url('./images/work-4.png')] bg-cover bg-center relative cursor-pointer hover:border-cyber-cyan/50 hover:shadow-glow-cyan-sm transition">
-                <div class="absolute inset-0 bg-gradient-to-t from-void via-void/60 to-transparent opacity-90"></div>
-                <div class="absolute bottom-0 left-0 right-0 p-5 flex items-center justify-between">
-                    <div>
-                        <h3 class="font-orbitron text-white font-semibold">StockSense AI</h3>
-                        <span class="text-slate-400 text-sm">Stock Market Analysis and Prediction</span>
+
+            <div class="group overflow-hidden rounded-2xl border border-cyber-cyan/20 bg-surface/50 backdrop-blur-sm transition hover:border-cyber-cyan/50 hover:shadow-glow-cyan-sm">
+                <div class="grid grid-cols-1 md:grid-cols-[240px,1fr]">
+                    <div class="min-h-56 md:min-h-full bg-[url('./images/work-4.png')] bg-cover bg-center"></div>
+                    <div class="p-6 md:p-8 flex flex-col justify-between gap-5">
+                        <div>
+                            <h3 class="font-orbitron text-2xl font-semibold text-white mb-2">StockSense AI</h3>
+                            <p class="text-slate-400 leading-relaxed mb-4">A stock market analysis and prediction project focused on model-driven insights and forecasting.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 rounded-full border border-cyber-cyan/20 bg-cyber-cyan/10 text-cyber-cyan text-xs font-orbitron">AI</span>
+                                <span class="px-3 py-1 rounded-full border border-cyber-cyan/20 bg-cyber-cyan/10 text-cyber-cyan text-xs font-orbitron">Prediction</span>
+                                <span class="px-3 py-1 rounded-full border border-cyber-cyan/20 bg-cyber-cyan/10 text-cyber-cyan text-xs font-orbitron">Finance</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-end">
+                            <span class="w-10 h-10 rounded-full border border-cyber-cyan/50 flex items-center justify-center text-cyber-cyan group-hover:bg-cyber-cyan/20 transition">→</span>
+                        </div>
                     </div>
-                    <span class="w-10 h-10 rounded-full border border-cyber-cyan/50 flex items-center justify-center text-cyber-cyan group-hover:bg-cyber-cyan/20 transition">→</span>
                 </div>
             </div>
         </div>
         <div class="text-center mt-10">
             <a href="#" class="inline-flex items-center gap-2 px-8 py-3 border border-cyber-cyan/40 rounded-lg font-orbitron text-sm text-cyber-cyan hover:bg-cyber-cyan/10 transition">Show more →</a>
+        </div>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog" class="w-full px-6 lg:px-[12%] py-20 scroll-mt-20 border-t border-cyber-cyan/10">
+        <p class="text-center font-orbitron text-cyber-cyan tracking-[0.2em] text-sm uppercase mb-2">Blog</p>
+        <h2 class="text-center text-4xl md:text-5xl font-orbitron font-bold text-white mb-8">Thoughts & Writing</h2>
+        <div id="blogList" class="max-w-4xl mx-auto"></div>
+        <div class="text-center mt-10">
+            <a href="./archive.html" class="inline-flex items-center gap-2 px-8 py-3 border border-cyber-cyan/40 rounded-lg font-orbitron text-sm text-cyber-cyan hover:bg-cyber-cyan/10 transition">Show archive →</a>
         </div>
     </section>
 
@@ -226,43 +256,25 @@
         </div>
     </div>
 
-    <!-- Contact -->
-    <section id="contact" class="w-full px-6 lg:px-[12%] py-20 scroll-mt-20 border-t border-cyber-cyan/10">
-        <p class="text-center font-orbitron text-cyber-cyan tracking-[0.2em] text-sm uppercase mb-2">Contact</p>
-        <h2 class="text-center text-4xl md:text-5xl font-orbitron font-bold text-white mb-4">Get in touch</h2>
-        <p class="text-center max-w-2xl mx-auto text-slate-500 mb-12">
-            Questions, project ideas, or just saying hi—reach out via email or socials.
-        </p>
-        <form action="" class="max-w-2xl mx-auto">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
-                <input type="text" placeholder="Your name" class="w-full p-4 rounded-lg border border-cyber-cyan/20 bg-surface/60 text-white placeholder-slate-500 focus:border-cyber-cyan/50 transition">
-                <input type="email" placeholder="Your email" class="w-full p-4 rounded-lg border border-cyber-cyan/20 bg-surface/60 text-white placeholder-slate-500 focus:border-cyber-cyan/50 transition">
-            </div>
-            <textarea rows="5" placeholder="Your message" class="w-full p-4 rounded-lg border border-cyber-cyan/20 bg-surface/60 text-white placeholder-slate-500 focus:border-cyber-cyan/50 transition resize-none mb-6"></textarea>
-            <div class="text-center">
-                <button type="submit" class="inline-flex items-center gap-2 px-8 py-4 border-2 border-cyber-cyan/50 rounded-lg font-orbitron text-cyber-cyan hover:bg-cyber-cyan/10 hover:shadow-glow-cyan-sm transition">Submit →</button>
-            </div>
-        </form>
-
-        <div class="mt-20 max-w-4xl mx-auto">
-            <div class="text-center mb-8">
-                <img src="./images/VW-dark.png" alt="" class="w-24 mx-auto mb-4 opacity-80">
-                <a href="mailto:vincentwu@utexas.edu" class="inline-flex items-center gap-2 text-cyber-cyan hover:underline font-orbitron text-sm">
-                    <img src="./images/mail_icon.png" alt="" class="w-5 invert opacity-80"> vincentwu@utexas.edu
-                </a>
-            </div>
-            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-cyber-cyan/20">
-                <p class="text-slate-500 text-sm font-orbitron tracking-wide">© 2026 Vincent Wu</p>
-                <ul class="flex items-center gap-8">
-                    <li><a href="https://www.instagram.com/vincen_wu_/" class="text-slate-400 hover:text-cyber-cyan transition text-sm font-orbitron">Instagram</a></li>
-                    <li><a href="https://github.com/VictoriousVincent1" class="text-slate-400 hover:text-cyber-cyan transition text-sm font-orbitron">GitHub</a></li>
-                    <li><a href="https://www.linkedin.com/in/vincentwu1/" class="text-slate-400 hover:text-cyber-cyan transition text-sm font-orbitron">LinkedIn</a></li>
-                    <li><a href="#" class="text-slate-400 hover:text-cyber-cyan transition text-sm font-orbitron">Twitter</a></li>
-                </ul>
-            </div>
+    <footer class="mt-20 max-w-4xl mx-auto px-6 pb-10">
+        <div class="text-center mb-8">
+            <img src="./images/VW-dark.png" alt="" class="w-24 mx-auto mb-4 opacity-80">
+            <a href="mailto:vincentwu@utexas.edu" class="inline-flex items-center gap-2 text-cyber-cyan hover:underline font-orbitron text-sm">
+                <img src="./images/mail_icon.png" alt="" class="w-5 invert opacity-80"> vincentwu@utexas.edu
+            </a>
         </div>
-    </section>
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-cyber-cyan/20">
+            <p class="text-slate-500 text-sm font-orbitron tracking-wide">© 2026 Vincent Wu</p>
+            <ul class="flex items-center gap-8">
+                <li><a href="https://www.instagram.com/vincen_wu_/" class="text-slate-400 hover:text-cyber-cyan transition text-sm font-orbitron">Instagram</a></li>
+                <li><a href="https://github.com/VictoriousVincent1" class="text-slate-400 hover:text-cyber-cyan transition text-sm font-orbitron">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/vincentwu1/" class="text-slate-400 hover:text-cyber-cyan transition text-sm font-orbitron">LinkedIn</a></li>
+                <li><a href="#" class="text-slate-400 hover:text-cyber-cyan transition text-sm font-orbitron">Twitter</a></li>
+            </ul>
+        </div>
+    </footer>
 
+    <script src="./blog.js"></script>
     <script src="./script.js"></script>
 </body>
 </html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archive — Vincent Wu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwind.config.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body class="overflow-x-hidden font-exo bg-void text-slate-200 antialiased min-h-screen">
+
+    <!-- Background: grid + gradient (same as homepage) -->
+    <div class="fixed inset-0 -z-20 bg-void bg-grid-pattern bg-grid bg-surface/50"></div>
+    <div class="fixed inset-0 -z-10 bg-gradient-radial pointer-events-none"></div>
+
+    <nav class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 border-b border-cyber-cyan/10 bg-void/80 backdrop-blur-xl">
+        <a href="/" class="flex items-center gap-2">
+            <img src="./images/VW-dark.png" alt="VW" class="w-12 h-12 object-contain">
+            <span class="font-orbitron text-sm tracking-widest text-cyber-cyan hidden sm:inline">Vincent Wu</span>
+        </a>
+        <ul class="flex items-center gap-4">
+            <li><a href="index.html" class="text-slate-300">Home</a></li>
+            <li><a href="index.html#blog" class="text-slate-300">Blog</a></li>
+        </ul>
+    </nav>
+
+    <main class="pt-28 max-w-4xl mx-auto px-6">
+        <h1 class="text-4xl font-orbitron font-bold text-white mb-6">Archive</h1>
+        <p class="text-slate-400 mb-8">All posts and external links to my Medium articles.</p>
+        <div id="blogList"></div>
+    </main>
+
+    <footer class="mt-20 max-w-4xl mx-auto px-6 pb-10">
+        <div class="text-center mb-8">
+            <img src="./images/VW-dark.png" alt="" class="w-24 mx-auto mb-4 opacity-80">
+            <a href="mailto:vincentwu@utexas.edu" class="inline-flex items-center gap-2 text-cyber-cyan hover:underline font-orbitron text-sm">
+                <img src="./images/mail_icon.png" alt="" class="w-5 invert opacity-80"> vincentwu@utexas.edu
+            </a>
+        </div>
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-cyber-cyan/20">
+            <p class="text-slate-500 text-sm font-orbitron tracking-wide">© 2026 Vincent Wu</p>
+            <ul class="flex items-center gap-8">
+                <li><a href="https://www.instagram.com/vincen_wu_/" class="text-slate-400 hover:text-cyber-cyan transition text-sm font-orbitron">Instagram</a></li>
+                <li><a href="https://github.com/VictoriousVincent1" class="text-slate-400 hover:text-cyber-cyan transition text-sm font-orbitron">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/vincentwu1/" class="text-slate-400 hover:text-cyber-cyan transition text-sm font-orbitron">LinkedIn</a></li>
+                <li><a href="#" class="text-slate-400 hover:text-cyber-cyan transition text-sm font-orbitron">Twitter</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="./blog.js"></script>
+</body>
+</html>
